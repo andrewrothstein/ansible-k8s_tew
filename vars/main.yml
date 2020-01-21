@@ -1,0 +1,6 @@
+---
+# vars file for k8s_tew
+k8s_tew_url: '{{ k8s_tew_mirror }}/{{ k8s_tew_ver }}/k8s-tew'
+k8s_tew_checksum: '{{ k8s_tew_checksums[k8s_tew_ver] }}'
+k8s_tew_exe: '{{ k8s_tew_install_dir }}/k8s-tew-{{ k8s_tew_ver }}'
+k8s_tew_link: '{{ k8s_tew_install_dir }}/k8s-tew'
