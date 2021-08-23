@@ -1,6 +1,6 @@
 andrewrothstein.k8s_tew
 =========
-[![Build Status](https://travis-ci.org/andrewrothstein/ansible-k8s_tew.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-k8s_tew)
+![Build Status](https://github.com/andrewrothstein/ansible-k8s_tew/actions/workflows/build.yml/badge.svg)
 
 Installs [Kubernetes - The Easier Way](https://github.com/darxkies/k8s-tew).
 
