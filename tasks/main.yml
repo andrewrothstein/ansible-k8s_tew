@@ -9,7 +9,7 @@
       skip: true
       paths:
         - '{{ role_path }}/vars'
-- name: download...
+- name: downloading {{ k8s_tew_url }} to {{ k8s_tew_exe }}
   become: yes
   become_user: root
   get_url:
@@ -17,7 +17,7 @@
     dest: '{{ k8s_tew_exe }}'
     mode: 0755
     checksum: '{{ k8s_tew_checksum }}'
-- name: link...
+- name: linking {{ k8s_tew_link }} to {{ k8s_tew_exe }}
   become: yes
   become_user: root
   file:
