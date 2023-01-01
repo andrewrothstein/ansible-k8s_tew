@@ -1,6 +1,6 @@
 ---
 # defaults file for k8s_tew
-k8s_tew_ver: 2.4.5
+k8s_tew_ver: 2.4.10
 k8s_tew_mirror: https://github.com/darxkies/k8s-tew/releases/download
 k8s_tew_install_dir: /usr/local/bin
 
@@ -9,3 +9,5 @@ k8s_tew_checksums:
   '2.3.4': sha256:a09680da97a7b4b62b3ef8bce17f8cf7d4ca3cdf79bf37b7c39d8219afbc6e38
   # https://github.com/darxkies/k8s-tew/releases/download/2.4.5/k8s-tew
   '2.4.5': sha256:cfb009da15675d902e0e6028d9ac27f214ad146456f92bef65afb644b7242ff7
+  # https://github.com/darxkies/k8s-tew/releases/download/2.4.10/k8s-tew
+  '2.4.10': sha256:19fd1540951c02e86bd10d30451871e218ecb2d7f93916ade64fc0360762003a
