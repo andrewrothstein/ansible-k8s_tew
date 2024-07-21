@@ -1,6 +1,6 @@
 ---
-- name: resolve platform specific vars
-  include_vars: '{{ item }}'
+- name: Resolve platform specific vars
+  ansible.builtin.include_vars: '{{ item }}'
   with_first_found:
     - files:
         - '{{ ansible_distribution }}-{{ ansible_distribution_release }}.yml'
@@ -9,18 +9,18 @@
       skip: true
       paths:
         - '{{ role_path }}/vars'
-- name: downloading {{ k8s_tew_url }} to {{ k8s_tew_exe }}
-  become: yes
+- name: Downloading {{ k8s_tew_url }} to {{ k8s_tew_exe }}
+  become: true
   become_user: root
-  get_url:
+  ansible.builtin.get_url:
     url: '{{ k8s_tew_url }}'
     dest: '{{ k8s_tew_exe }}'
-    mode: 0755
+    mode: '755'
     checksum: '{{ k8s_tew_checksum }}'
-- name: linking {{ k8s_tew_link }} to {{ k8s_tew_exe }}
-  become: yes
+- name: Linking {{ k8s_tew_link }} to {{ k8s_tew_exe }}
+  become: true
   become_user: root
-  file:
+  ansible.builtin.file:
     src: '{{ k8s_tew_exe }}'
     dest: '{{ k8s_tew_link }}'
     state: link
